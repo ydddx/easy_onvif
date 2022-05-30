@@ -283,7 +283,7 @@ class SoapRequest {
   ///XML for the [snapshotUri], requires a [profileToken] and [Preset]
   static XmlDocumentFragment gotoPreset(String profileToken, Preset preset) {
     builder.element('GotoPreset', nest: () {
-      builder.namespace(Xmlns.tds);
+      builder.namespace(Xmlns.tptz);
       builder.element('ProfileToken', nest: () {
         builder.namespace(Xmlns.tptz);
         builder.text(profileToken);
