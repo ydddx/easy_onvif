@@ -28,21 +28,21 @@ class VideoEncoderConfiguration {
 
   ///Used video codec, either Jpeg, H.264 or Mpeg4
   ///- enum { 'JPEG', 'MPEG4', 'H264' }
-  @JsonKey(name: 'Encoding', fromJson: OnvifUtil.mappedToString)
-  final String encoding;
+  @JsonKey(name: 'Encoding', fromJson: OnvifUtil.nullableMappedToString)
+  final String? encoding;
 
   ///Configured video resolution
   @JsonKey(name: 'Resolution')
-  final Resolution resolution;
+  final Resolution? resolution;
 
   ///Relative value for the video quantizers and the quality of the video. A
   ///high value within supported quality range means higher quality
-  @JsonKey(name: 'Quality', fromJson: OnvifUtil.mappedToDouble)
-  final dynamic quality;
+  @JsonKey(name: 'Quality', fromJson: OnvifUtil.nullableMappedToDouble)
+  final dynamic? quality;
 
   ///Optional element to configure rate control related parameters.
   @JsonKey(name: 'RateControl')
-  final RateControl rateControl;
+  final RateControl? rateControl;
 
   ///Optional element to configure Mpeg4 related parameters.
   @JsonKey(name: 'MPEG4')
@@ -54,10 +54,10 @@ class VideoEncoderConfiguration {
 
   ///Defines the multicast settings that could be used for video streaming.
   @JsonKey(name: 'Multicast')
-  final Multicast multiCast;
+  final Multicast? multiCast;
 
   ///The rtsp session timeout for the related video stream
-  @JsonKey(name: 'SessionTimeout', fromJson: OnvifUtil.mappedToString)
+  @JsonKey(name: 'SessionTimeout', fromJson: OnvifUtil.nullableMappedToString)
   final dynamic sessionTimeout;
 
   VideoEncoderConfiguration(

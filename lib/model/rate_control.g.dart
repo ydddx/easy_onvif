@@ -7,12 +7,12 @@ part of 'rate_control.dart';
 // **************************************************************************
 
 RateControl _$RateControlFromJson(Map<String, dynamic> json) => RateControl(
-      frameRateLimit:
-          OnvifUtil.mappedToInt(json['FrameRateLimit'] as Map<String, dynamic>),
-      encodingInterval: OnvifUtil.mappedToInt(
-          json['EncodingInterval'] as Map<String, dynamic>),
-      bitrateLimit:
-          OnvifUtil.mappedToInt(json['BitrateLimit'] as Map<String, dynamic>),
+      frameRateLimit: OnvifUtil.nullableMappedToInt(
+          json['FrameRateLimit'] as Map<String, dynamic>?),
+      encodingInterval: OnvifUtil.nullableMappedToInt(
+          json['EncodingInterval'] as Map<String, dynamic>?),
+      bitrateLimit: OnvifUtil.nullableMappedToInt(
+          json['BitrateLimit'] as Map<String, dynamic>?),
     );
 
 Map<String, dynamic> _$RateControlToJson(RateControl instance) =>
